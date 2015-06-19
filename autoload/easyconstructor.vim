@@ -16,9 +16,7 @@ function! s:arg_to_constructor(argname)
 endfunction
 
 function! s:execute_impl(selected_lines)
-  return map(
-    s:split_args(a:selected_lines),
-    "s:arg_to_constructor(v:val)")
+  return map(s:split_args(a:selected_lines), "s:arg_to_constructor(v:val)")
 endfunction
 
 function! easyconstructor#execute() range
